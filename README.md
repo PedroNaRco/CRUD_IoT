@@ -23,7 +23,9 @@ Este projeto é um CRUD (Create, Read, Update, Delete) desenvolvido com **Larave
 - ✏️ Edição de dispositivos
 - ❌ Exclusão de dispositivos
 - 🟢 Campo de status (ativo/inativo)
-- 💡 Interface simples e intuitiva com **Bootstrap 5**
+- 💡 Interface simples intuitiva e responsiva com **Bootstrap 5**
+- 🔐 Login, registro e autenticação de usuários
+- 🚪 Logout seguro
 
 ---
 
@@ -43,3 +45,4 @@ Este projeto é um CRUD (Create, Read, Update, Delete) desenvolvido com **Larave
    ```bash
    git clone https://github.com/seuusuario/iot-crud.git
    cd iot-crud
+   

@@ -10,7 +10,6 @@
         @csrf
     <button class="btn btn-danger mb-3">deslogar</button>
     </form>
-    <a class="btn btn-warning mb-3">Logs</a>
     @else
     <a href="{{ route('login') }}" class="btn btn-success mb-3">Login</a>
     @endif
@@ -38,6 +37,7 @@
                     <td>{{ $dispositivo->modelo }}</td>
                     <td>{{ $dispositivo->ativo ? 'Ativo' : 'Inativo' }}</td>
                     <td>
+                        @if (Auth::check())
                         <a href="{{ route('dispositivos.edit', $dispositivo) }}" class="btn btn-warning btn-sm">Editar</a>
                         <form action="{{ route('dispositivos.destroy', $dispositivo) }}" method="POST"
                             style="display:inline;">
@@ -45,6 +45,7 @@
                             @method('DELETE')
                             <button class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza?')">Excluir</button>
                         </form>
+                        @endif
                     </td>
                 </tr>
             @empty
